@@ -22,7 +22,18 @@ public class Add extends AppCompatActivity {
             public void onClick(View view) {
                 String name = bind.tvName.getText().toString();
                 String author = bind.tvAuthor.getText().toString();
-                String pNumber = bind.tvPages.getText().toString();
+                String number = bind.tvPages.getText().toString();
+
+                //we first create entity instance where we will add our data
+                Entity entity = new Entity(name, author, number);
+
+                //now pass the entity to insert method declared in interface class
+                DBHelper dbHelper = DBHelper.getDB(Add.this);
+
+                dbHelper.dao().insertData(entity);
+
+                //this intent will lead us back to the main activity when data is add
+                startActivity(new Intent(Add.this, MainActivity.class));
 
             }
         });

@@ -69,7 +69,7 @@ public class Entity {
         return number;
     }
 
-    public void setNumber(String pNumber) {
-        this.number = pNumber;
+    public void setNumber(String number) {
+        this.number = number;
     }
 }
