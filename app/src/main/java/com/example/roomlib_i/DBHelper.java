@@ -31,5 +31,5 @@ public abstract class DBHelper  extends RoomDatabase {
         return instance;
     }
 
-
+    public abstract DAO dao();
 }

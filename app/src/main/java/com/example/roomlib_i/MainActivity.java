@@ -10,5 +10,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        DBHelper dbHelper = DBHelper.getDB(this);
+
+        dbHelper.dao().insertData(new Entity("Book", "writer", "100"));
     }
 }

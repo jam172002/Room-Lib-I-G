@@ -19,24 +19,24 @@ public class Entity {
     private String author;
 
     @ColumnInfo(name = "Pages")
-    private String pNumber;
+    private String number;
 
     //now the main constructor
 
 
-    public Entity(int id, String name, String author, String pNumber) {
+  /*  public Entity(int id, String name, String author, String pNumber) {
         this.id = id;
         this.name = name;
         this.author = author;
-        this.pNumber = pNumber;
-    }
+        this.number = pNumber;
+    }*/
 
     //this is not main constructor therefore it is annotated so IDE could see which is default constructor
-    @Ignore
-    public Entity(String name, String author, String pNumber) {
+    //@Ignore
+    public Entity(String name, String author, String number) {
         this.name = name;
         this.author = author;
-        this.pNumber = pNumber;
+        this.number = number;
     }
 
     //the getter and setter work as same as constructor but still we need when one or few variables need to be get and set values
@@ -65,11 +65,11 @@ public class Entity {
         this.author = author;
     }
 
-    public String getpNumber() {
-        return pNumber;
+    public String getNumber() {
+        return number;
     }
 
-    public void setpNumber(String pNumber) {
-        this.pNumber = pNumber;
+    public void setNumber(String pNumber) {
+        this.number = pNumber;
     }
 }
